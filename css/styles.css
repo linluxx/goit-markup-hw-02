@@ -1,14 +1,18 @@
 :root {
   --title: #212121;
+  --white-title: #ffffff;
   --main-text: #757575;
   --accent: #2196f3;
-  --btn-text: #ffffff;
-  --second-btn-bg: #f5f4fa;
-  --second-btn-text: #212121;
+  --active-btn-color: #2196f3;
+  --active-btn-text: #ffffff;
+  --unactive-btn-bg: #f5f4fa;
+  --unactive-btn-text: #212121;
+  --background: #2f303a;
+  --second-bg: #f5f4fa;
 }
 
 body {
-  font-family: Roboto, Tahoma, sans-serif;
+  font-family: Roboto, sans-serif;
   color: #212121;
 }
 
@@ -18,6 +22,10 @@ body {
 
 .list {
   list-style: none;
+}
+
+.header-link.current {
+  color: var(--accent);
 }
 
 .visually-hidden {
@@ -36,15 +44,15 @@ body {
 /* ---------------------HEADER--------------------- */
 
 .logo {
-  font-family: Raleway, Tahoma, sans-serif;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--accent);
 }
 .header-logo {
-  color: black;
+  color: #000;
 }
 
 .header-link {
@@ -52,7 +60,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--title);
 }
 
 .header-link:hover,
@@ -67,13 +75,13 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--main-text);
 }
 
 /* ---------------------HERO--------------------- */
 
 .hero {
-  background-color: #2f303a;
+  background-color: var(--background);
 }
 .hero-title {
   font-weight: 900;
@@ -82,7 +90,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: white;
+  color: var(--white-title);
 }
 .hero-btn {
   font-family: inherit;
@@ -94,8 +102,8 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
-  color: var(--btn-text);
-  background-color: var(--accent);
+  color: var(--unactive-btn-text);
+  background-color: var(--active-btn-color);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -131,7 +139,7 @@ body {
 /* ---------------------TEAM--------------------- */
 
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--second-bg);
 }
 .team-title {
   font-weight: 700;
@@ -144,14 +152,14 @@ body {
 .team-top-text {
   font-weight: 500;
   font-size: 16px;
-  line-height: 0.84;
+  line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title);
 }
 .team-text {
   font-size: 16px;
-  line-height: 0.84;
+  line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text);
@@ -160,11 +168,11 @@ body {
 /* ---------------------FOOTER--------------------- */
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--background);
 }
 
 .footer-logo {
-  color: white;
+  color: var(--white-title);
 }
 
 .footer-adress-link {
@@ -172,7 +180,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: white;
+  color: var(--white-title);
 }
 
 .footer-link {
@@ -180,7 +188,8 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--white-title);
+  opacity: 60%;
 }
 
 .footer-adress-link:hover,
@@ -199,14 +208,14 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--second-btn-text-color);
-  background-color: var(--second-btn-bg);
+  color: var(--unactive-btn-text);
+  background-color: var(--unactive-btn-bg);
   cursor: pointer;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
-  color: var(--btn-text);
-  background-color: var(--accent);
+  color: var(--active-btn-text);
+  background-color: var(--active-btn-color);
 }
 
 .portfolio-top-text {
